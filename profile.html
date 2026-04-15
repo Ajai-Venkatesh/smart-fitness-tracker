@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriMuscles Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Bebas+Neue&amp;family=Rajdhani:wght@500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#5c6600",
+              "on-error": "#450900",
+              "on-tertiary-fixed": "#380015",
+              "primary-dim": "#d9ef00",
+              "primary": "#f8ffb8",
+              "on-surface-variant": "#acaab1",
+              "tertiary": "#ff6b98",
+              "surface-container-lowest": "#000000",
+              "secondary-container": "#006970",
+              "tertiary-fixed-dim": "#ff769e",
+              "background": "#0e0e13",
+              "error-dim": "#d53d18",
+              "inverse-on-surface": "#55545b",
+              "on-secondary-fixed": "#003f43",
+              "inverse-primary": "#5b6400",
+              "surface-container": "#19191f",
+              "on-tertiary": "#47001d",
+              "on-background": "#f9f5fd",
+              "outline-variant": "#48474d",
+              "surface-tint": "#f8ffb8",
+              "secondary-fixed-dim": "#00deec",
+              "error-container": "#b92902",
+              "primary-fixed-dim": "#d4e900",
+              "error": "#ff7351",
+              "tertiary-fixed": "#ff8eac",
+              "on-error-container": "#ffd2c8",
+              "on-primary-container": "#535c00",
+              "tertiary-container": "#fc0078",
+              "surface-dim": "#0e0e13",
+              "surface-bright": "#2c2b33",
+              "on-primary-fixed": "#414900",
+              "primary-fixed": "#e1f800",
+              "outline": "#76747b",
+              "surface-container-low": "#131319",
+              "surface-container-high": "#1f1f26",
+              "secondary": "#00eefc",
+              "on-secondary": "#005359",
+              "on-secondary-fixed-variant": "#005e64",
+              "secondary-fixed": "#00eefc",
+              "tertiary-dim": "#e4006c",
+              "secondary-dim": "#00deec",
+              "surface-container-highest": "#25252d",
+              "inverse-surface": "#fcf8ff",
+              "on-secondary-container": "#e3fdff",
+              "surface": "#0e0e13",
+              "primary-container": "#e1f800",
+              "on-tertiary-container": "#000000",
+              "on-tertiary-fixed-variant": "#760035",
+              "surface-variant": "#25252d",
+              "on-surface": "#f9f5fd",
+              "on-primary": "#5b6400"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"],
+              "bebas": ["Bebas Neue"],
+              "rajdhani": ["Rajdhani"],
+              "mono": ["Space Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .grid-bg {
+            background-image: radial-gradient(circle, #ffffff08 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#000000] border-b border-[#1f1f23] shadow-[0_0_15px_rgba(225,248,0,0.1)] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e1f800]">menu</span>
+<h1 class="font-['Epilogue'] font-bold tracking-tight uppercase text-[#e1f800]">PROFILE</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#e1f800]">settings</span>
+</div>
+</header>
+<main class="pt-20 pb-28 px-4 max-w-2xl mx-auto grid-bg min-h-screen">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center mb-8">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest border-2 border-primary-fixed flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(225,248,0,0.2)]">
+<span class="font-bebas text-4xl text-primary-fixed tracking-widest">JD</span>
+</div>
+<h2 class="font-rajdhani font-bold text-3xl text-on-background tracking-wide mb-2 uppercase">John Doe</h2>
+<div class="bg-tertiary-container/20 px-4 py-1 border border-tertiary-container/30">
+<span class="font-mono text-xs text-tertiary tracking-tighter font-bold uppercase">MUSCLE GAIN</span>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-3 gap-3 mb-10">
+<div class="bg-[#15151F] p-4 flex flex-col items-center border-l-2 border-outline-variant/30">
+<span class="font-mono text-[10px] text-on-surface-variant uppercase mb-1">Weight</span>
+<span class="font-bebas text-2xl text-on-background">75 KG</span>
+</div>
+<div class="bg-[#15151F] p-4 flex flex-col items-center border-l-2 border-outline-variant/30">
+<span class="font-mono text-[10px] text-on-surface-variant uppercase mb-1">Height</span>
+<span class="font-bebas text-2xl text-on-background">175 CM</span>
+</div>
+<div class="bg-[#15151F] p-4 flex flex-col items-center border-l-2 border-outline-variant/30">
+<span class="font-mono text-[10px] text-on-surface-variant uppercase mb-1">Body Fat</span>
+<span class="font-bebas text-2xl text-on-background">18%</span>
+</div>
+</section>
+<!-- My Plan Stats Section -->
+<section class="mb-10">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-6 bg-primary"></div>
+<h3 class="font-bebas text-xl tracking-wider text-on-background">MY PLAN STATS</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Daily Calories -->
+<div class="p-4 bg-surface-container border border-outline-variant/10 text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mb-1">TARGET CALORIES</p>
+<p id="val-profile-cals" class="font-bebas text-3xl text-error tracking-tight">2,450 kcal</p>
+</div>
+<!-- Daily Protein -->
+<div class="p-4 bg-surface-container border border-outline-variant/10 text-center">
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mb-1">PROTEIN GOAL</p>
+<p id="val-profile-protein" class="font-bebas text-3xl text-primary-fixed tracking-tight">185g</p>
+</div>
+<!-- Training Days -->
+<div class="bg-surface-container-low p-5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-secondary/5 -mr-8 -mt-8 rotate-45"></div>
+<p class="font-mono text-[10px] text-on-surface-variant mb-2 uppercase">TRAINING DAYS</p>
+<p class="font-bebas text-3xl text-secondary tracking-tight">5/week</p>
+</div>
+<!-- Plan Type -->
+<div class="bg-surface-container-low p-5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-on-surface-variant/5 -mr-8 -mt-8 rotate-45"></div>
+<p class="font-mono text-[10px] text-on-surface-variant mb-2 uppercase">PLAN TYPE</p>
+<p class="font-bebas text-3xl text-on-surface-variant tracking-tight">Intermediate</p>
+</div>
+</div>
+</section>
+<!-- Settings List -->
+<section class="mb-10">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-1 h-6 bg-primary"></div>
+<h3 class="font-bebas text-xl tracking-wider text-on-background">SETTINGS</h3>
+</div>
+<div class="space-y-3">
+<!-- List Item 1 -->
+<div class="bg-[#15151F] p-4 flex items-center justify-between group hover:bg-surface-container-high transition-colors cursor-pointer border-r-4 border-transparent hover:border-primary-fixed">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-xl">person</span>
+</div>
+<span class="font-rajdhani font-semibold text-lg text-on-background">Edit Profile</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+<!-- List Item 2 -->
+<div class="bg-[#15151F] p-4 flex items-center justify-between group hover:bg-surface-container-high transition-colors cursor-pointer border-r-4 border-transparent hover:border-primary-fixed">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-xl">refresh</span>
+</div>
+<span class="font-rajdhani font-semibold text-lg text-on-background">Recalculate Plan</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+<!-- List Item 3 -->
+<div class="bg-[#15151F] p-4 flex items-center justify-between group hover:bg-surface-container-high transition-colors cursor-pointer border-r-4 border-transparent hover:border-primary-fixed">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-xl">restaurant</span>
+</div>
+<span class="font-rajdhani font-semibold text-lg text-on-background">Diet Preferences</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+<!-- List Item 4 -->
+<div class="bg-[#15151F] p-4 flex items-center justify-between group hover:bg-surface-container-high transition-colors cursor-pointer border-r-4 border-transparent hover:border-primary-fixed">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-xl">notifications</span>
+</div>
+<span class="font-rajdhani font-semibold text-lg text-on-background">Notification Settings</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+<!-- List Item 5 -->
+<div class="bg-[#15151F] p-4 flex items-center justify-between group hover:bg-surface-container-high transition-colors cursor-pointer border-r-4 border-transparent hover:border-primary-fixed">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-xl">picture_as_pdf</span>
+</div>
+<span class="font-rajdhani font-semibold text-lg text-on-background">Export Plan as PDF</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary-fixed transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- CTA Button -->
+<button class="w-full bg-primary-container text-on-primary-fixed font-bebas text-2xl py-4 active:scale-95 transition-transform shadow-[0_4px_20px_rgba(225,248,0,0.3)] border-b-4 border-on-primary-fixed-variant">
+            REGENERATE FULL PLAN
+        </button>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 w-full z-50 h-20 border-t-0 bg-gradient-to-t from-black to-[#0e0e13] shadow-[0_-4px_20px_rgba(0,0,0,0.8)] flex justify-around items-center">
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-[#f8ffb8]/40 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/10" href="dashboard.html">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">DASHBOARD</span>
+</a>
+<!-- Workout -->
+<a class="flex flex-col items-center justify-center text-[#f8ffb8]/40 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/10" href="workout.html">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">WORKOUT</span>
+</a>
+<!-- Nutrition -->
+<a class="flex flex-col items-center justify-center text-[#f8ffb8]/40 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/10" href="diet.html">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">NUTRITION</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center text-[#e1f800] border-l-4 border-[#e1f800] bg-[#e1f800]/5 py-2" href="profile.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Inter:wght@100..900&amp;family=Space+Grotesk:wght@300..700&amp;family=Rajdhani:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#f9f5fd",
+              "on-tertiary": "#47001d",
+              "error-dim": "#d53d18",
+              "surface-container-low": "#131319",
+              "inverse-surface": "#fcf8ff",
+              "surface-bright": "#2c2b33",
+              "surface-container-highest": "#25252d",
+              "on-primary-fixed": "#414900",
+              "tertiary-fixed-dim": "#ff769e",
+              "surface-container": "#19191f",
+              "tertiary-dim": "#e4006c",
+              "surface-dim": "#0e0e13",
+              "tertiary-container": "#fc0078",
+              "primary-dim": "#d9ef00",
+              "primary-fixed-dim": "#d4e900",
+              "on-secondary": "#005359",
+              "on-tertiary-fixed": "#380015",
+              "on-surface-variant": "#acaab1",
+              "on-secondary-fixed-variant": "#005e64",
+              "secondary-fixed-dim": "#00deec",
+              "on-primary-container": "#535c00",
+              "on-error": "#450900",
+              "primary-fixed": "#e1f800",
+              "on-tertiary-fixed-variant": "#760035",
+              "on-primary-fixed-variant": "#5c6600",
+              "on-secondary-container": "#e3fdff",
+              "surface-variant": "#25252d",
+              "error-container": "#b92902",
+              "error": "#ff7351",
+              "tertiary-fixed": "#ff8eac",
+              "surface-tint": "#f8ffb8",
+              "primary-container": "#e1f800",
+              "secondary-fixed": "#00eefc",
+              "inverse-primary": "#5b6400",
+              "surface-container-high": "#1f1f26",
+              "secondary-dim": "#00deec",
+              "on-error-container": "#ffd2c8",
+              "tertiary": "#ff6b98",
+              "on-surface": "#f9f5fd",
+              "background": "#0e0e13",
+              "secondary": "#00eefc",
+              "secondary-container": "#006970",
+              "on-tertiary-container": "#000000",
+              "primary": "#f8ffb8",
+              "inverse-on-surface": "#55545b",
+              "outline": "#76747b",
+              "on-primary": "#5b6400",
+              "outline-variant": "#48474d",
+              "surface-container-lowest": "#000000",
+              "surface": "#0e0e13",
+              "on-secondary-fixed": "#003f43"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"],
+              "mono": ["Space Grotesk"],
+              "rajdhani": ["Rajdhani"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .technical-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(225, 248, 0, 0.03) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .glow-primary {
+            box-shadow: 0 0 24px rgba(225, 248, 0, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-black technical-grid min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 rounded-none bg-[#0e0e13] dark:bg-[#000000] shadow-[0_0_20px_rgba(225,248,0,0.1)] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<a href="workout.html" class="text-[#e1f800] active:scale-95 duration-100 flex items-center justify-center p-2 hover:bg-[#e1f800]/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<div class="flex flex-col">
+<h1 class="font-headline font-black uppercase tracking-tighter text-2xl text-[#e1f800]">PUSH DAY</h1>
+<span class="font-mono text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">DAY 1 · CHEST &amp; SHOULDERS</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-high px-3 py-1 border border-outline-variant/20">
+<span class="font-mono text-xs font-bold text-primary">60 MIN</span>
+</div>
+<button class="text-[#e1f800] active:scale-95 duration-100 flex items-center justify-center p-2 hover:bg-[#e1f800]/10 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-4xl mx-auto space-y-8">
+<!-- Progress Indicator -->
+<div class="flex items-center justify-center gap-4 py-2">
+<div class="w-2.5 h-2.5 bg-primary-fixed shadow-[0_0_8px_rgba(225,248,0,0.5)]"></div>
+<div class="w-2.5 h-2.5 border border-outline-variant"></div>
+<div class="w-2.5 h-2.5 border border-outline-variant"></div>
+<div class="w-2.5 h-2.5 border border-outline-variant"></div>
+<div class="w-2.5 h-2.5 border border-outline-variant"></div>
+</div>
+<!-- Main Exercise Card -->
+<section class="bg-surface-container-low border-l-4 border-primary p-6 md:p-10 relative glow-primary overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<span class="font-mono text-on-surface-variant font-bold text-lg tracking-widest">01 / 05</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<div class="space-y-6">
+<div>
+<h2 class="font-headline font-black italic text-4xl md:text-5xl uppercase leading-none tracking-tighter text-on-surface">
+                            BARBELL BENCH PRESS
+                        </h2>
+</div>
+<p class="font-rajdhani text-on-surface-variant text-lg leading-relaxed max-w-md">
+                        A fundamental compound exercise targeting the chest, shoulders, and triceps. Ensure your feet are planted and maintain a slight arch in your lower back for stability.
+                    </p>
+<!-- Stats Row -->
+<div class="flex flex-wrap gap-3">
+<div class="bg-surface-container-high px-4 py-2 border border-outline-variant/30 flex items-center gap-2">
+<span class="font-mono text-xs text-primary">SETS</span>
+<span class="font-mono text-sm font-bold">4</span>
+</div>
+<div class="bg-surface-container-high px-4 py-2 border border-outline-variant/30 flex items-center gap-2">
+<span class="font-mono text-xs text-primary">REPS</span>
+<span class="font-mono text-sm font-bold">8–12</span>
+</div>
+<div class="bg-surface-container-high px-4 py-2 border border-outline-variant/30 flex items-center gap-2">
+<span class="font-mono text-xs text-primary">REST</span>
+<span class="font-mono text-sm font-bold">90 SEC</span>
+</div>
+</div>
+<!-- Logger Section -->
+<div class="pt-6 space-y-4">
+<div class="bg-surface-container-highest p-4 flex items-center justify-between border-b-2 border-primary">
+<div>
+<span class="font-mono text-xs text-on-surface-variant uppercase tracking-widest">SETS COMPLETED</span>
+<div class="text-2xl font-headline font-black">0 / 4</div>
+</div>
+<button class="w-12 h-12 bg-primary flex items-center justify-center text-on-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Exercise Media Placeholder -->
+<div class="aspect-square w-full bg-surface-container border-2 border-primary-fixed/30 relative group">
+<img alt="Bodybuilder performing barbell bench press" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="dramatic low angle shot of a powerlifter preparing to bench press a heavy barbell in a dark industrial gym with neon highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdmcs3MRCV0XlRlfiAEMsFYPU42_Oudfnles9QDyeRzDQ4AoYLnZku8J6aQr8MXIs_2hnJPlgIuPj4GzZinSt_JnUhyx5vLWPaiijLNQddoH_exNkT3r9wxNHm-dtbUDyTGtl_e7ZjD21L7lb5J76_OlN2uQCz57R2WfoTAgQZ0nlVhiq3wjK-m5XyQ5NSQTaFxsxePweO0a-S1JsMDfGpvod5HUthXZmcWVzzw7RCCbyQvhnREzLJemz6y7YF1g_WKAmW5bBGqoE"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 border-2 border-primary flex items-center justify-center bg-black/40 backdrop-blur-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 font-mono text-[10px] text-primary-fixed/50 uppercase tracking-[0.2em]">
+                        Live Feed // Sensor Active
+                    </div>
+</div>
+</div>
+</section>
+<!-- Upcoming Section -->
+<section class="space-y-4">
+<h3 class="font-mono text-xs font-bold text-on-surface-variant uppercase tracking-[0.3em] flex items-center gap-3">
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+                UPCOMING
+            </h3>
+<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
+<div class="min-w-[200px] bg-surface-container border border-outline-variant/20 p-4 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="aspect-video bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Dumbbell press workout" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" data-alt="close up of heavy dumbbells on a weight rack in a dark high performance training facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4-J4Fw_eF6vrhUGlkXIq0zr9v5EwyNhzd4Leyvqf2w8pO5jJADhPhwS0hnQDuVvmkrWQGPoB73iDLfyzrCJ4FXNA2WsyqDAE-btG0GLQZTcetk-_maumUOvfY5D0rC7ungcQtHRz4IhhOPeReE2hLzUDAIzddzNPkVevAwGoga6GybHak46Wvc38jq75KoZ_Xnf7TQo7oV9kJMP1IitM1qXgEPRR1lM4lkN_l_bF3MEXH91GuM0UF--shaSpO6zsJoTXmhRiV5xk"/>
+</div>
+<span class="font-mono text-[10px] text-primary">02</span>
+<h4 class="font-headline font-bold text-sm uppercase">INCLINE DB PRESS</h4>
+</div>
+<div class="min-w-[200px] bg-surface-container border border-outline-variant/20 p-4 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="aspect-video bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Lateral raises exercise" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" data-alt="athlete performing lateral shoulder raises with weights in a modern technical gym setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhkYsbzZjygSyfeorjbgparNuIe8YEEeFFwLy4zRyHv7GNmYurd_fxVFhO3erYzQH5_oFBzaHaz_anaH0Vn1ylN5X5dMOzRiBnWs3EVcXyM_Dx9VgG6ykojGooZMaI_wx0m6PjdU6z3q9SWafjCh69nkbldTQJfnDIzDKetqSD_iiBSkdcxZYm90Om-xH4Dghn7FfzIYP12ES_8IJ-q_T-fI7zpTsfocn9CGecyxnPDi2Yi6hRcsA7Pq6jR9Xr86ifvfCEya6BWHI"/>
+</div>
+<span class="font-mono text-[10px] text-primary">03</span>
+<h4 class="font-headline font-bold text-sm uppercase">LATERAL RAISES</h4>
+</div>
+<div class="min-w-[200px] bg-surface-container border border-outline-variant/20 p-4 hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="aspect-video bg-surface-container-highest mb-3 overflow-hidden">
+<img alt="Tricep pushdowns" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-opacity" data-alt="cable machine tricep extension handle close up with industrial textures and cold lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3A__YJHObGiL_eMwJJ9J3_0FfPl1p8WhSPSI8lBbIsIgispT4rHX6spUA4J6ly2dzsE60JYjEtiBa6xpqNFwxoCsF8IsIAtQ9JR4BmcQBClQ6xhmnDlULLqwoHQAuDbhP1Mgl6uVhLBMnL40GKcKn-ldXxsor3UoizwHaBp9n_1Wa0FAc6ekAW9L5fd6fmT6UR1yLRfwhLcdM1iN_8MahQ2l7YdW_h5cHAM_xDHiyF6fqHlLYD_KBQwM2RP3bOfwPmi8IiD__E4"/>
+</div>
+<span class="font-mono text-[10px] text-primary">04</span>
+<h4 class="font-headline font-bold text-sm uppercase">TRICEP PUSHDOWN</h4>
+</div>
+</div>
+</section>
+<!-- Navigation Controls -->
+<div class="grid grid-cols-2 gap-4 pt-4">
+<button class="flex items-center justify-center gap-2 h-14 border border-outline-variant font-mono text-sm font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                PREV EXERCISE
+            </button>
+<button class="flex items-center justify-center gap-2 h-14 bg-primary text-on-primary-fixed font-mono text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 shadow-[0_4px_16px_rgba(225,248,0,0.2)]">
+                NEXT EXERCISE
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full grid grid-cols-4 h-20 items-stretch bg-[#000000] z-50 shadow-[0_-4px_24px_rgba(225,248,0,0.05)]">
+<div class="flex flex-col items-center justify-center text-gray-500 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold hover:text-white transition-all active:bg-[#e1f800] active:text-black duration-75 cursor-pointer">
+<span class="material-symbols-outlined mb-1">add_box</span>
+<span>LOG_SET</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#e1f800] border-l-4 border-[#e1f800] bg-[#e1f800]/5 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold hover:text-white transition-all active:bg-[#e1f800] active:text-black duration-75 cursor-pointer">
+<span class="material-symbols-outlined mb-1">format_list_bulleted</span>
+<span>EXERCISES</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold hover:text-white transition-all active:bg-[#e1f800] active:text-black duration-75 cursor-pointer">
+<span class="material-symbols-outlined mb-1">timer</span>
+<span>REST</span>
+</div>
+<a href="workout.html" class="flex flex-col items-center justify-center text-gray-500 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold hover:text-white transition-all active:bg-[#e1f800] active:text-black duration-75 cursor-pointer">
+<span class="material-symbols-outlined mb-1">check_circle</span>
+<span>FINISH</span>
+</a>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

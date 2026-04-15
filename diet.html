@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriMuscles - Diet Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Bebas+Neue&amp;family=Space+Mono&amp;family=Rajdhani:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#e1f800",
+              "on-tertiary-container": "#000000",
+              "surface-bright": "#2c2b33",
+              "secondary-container": "#006970",
+              "inverse-surface": "#fcf8ff",
+              "surface-variant": "#25252d",
+              "on-primary-container": "#535c00",
+              "on-secondary-fixed-variant": "#005e64",
+              "on-secondary": "#005359",
+              "tertiary": "#ff6b98",
+              "on-primary": "#5b6400",
+              "on-secondary-fixed": "#003f43",
+              "primary-container": "#e1f800",
+              "surface-container-lowest": "#000000",
+              "secondary-dim": "#00deec",
+              "primary-dim": "#d9ef00",
+              "tertiary-container": "#fc0078",
+              "primary": "#f8ffb8",
+              "surface-tint": "#f8ffb8",
+              "on-background": "#f9f5fd",
+              "on-surface": "#f9f5fd",
+              "surface": "#0e0e13",
+              "surface-dim": "#0e0e13",
+              "on-tertiary-fixed": "#380015",
+              "secondary-fixed": "#00eefc",
+              "surface-container-low": "#131319",
+              "on-primary-fixed": "#414900",
+              "tertiary-dim": "#e4006c",
+              "inverse-on-surface": "#55545b",
+              "error-dim": "#d53d18",
+              "on-primary-fixed-variant": "#5c6600",
+              "on-error-container": "#ffd2c8",
+              "inverse-primary": "#5b6400",
+              "on-surface-variant": "#acaab1",
+              "background": "#0e0e13",
+              "surface-container-highest": "#25252d",
+              "outline-variant": "#48474d",
+              "error": "#ff7351",
+              "surface-container-high": "#1f1f26",
+              "secondary": "#00eefc",
+              "on-error": "#450900",
+              "surface-container": "#19191f",
+              "primary-fixed-dim": "#d4e900",
+              "tertiary-fixed": "#ff8eac",
+              "on-tertiary-fixed-variant": "#760035",
+              "outline": "#76747b",
+              "on-secondary-container": "#e3fdff",
+              "tertiary-fixed-dim": "#ff769e",
+              "secondary-fixed-dim": "#00deec",
+              "error-container": "#b92902",
+              "on-tertiary": "#47001d"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"],
+              "bebas": ["Bebas Neue"],
+              "mono-tech": ["Space Mono"],
+              "rajdhani": ["Rajdhani"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .technical-grid {
+            background-image: linear-gradient(to right, rgba(172, 170, 177, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(172, 170, 177, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container technical-grid min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 z-50 flex items-center justify-between px-6 py-4 w-full bg-[#000000] shadow-[0_0_20px_rgba(225,248,0,0.1)] border-b-0">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e1f800]">menu</span>
+<div class="flex flex-col">
+<h1 class="font-bebas text-[#e1f800] text-3xl tracking-widest leading-none">DIET PLAN</h1>
+<p class="font-mono-tech text-on-surface-variant text-[10px] tracking-tighter">6 MEALS / DAY — HIGH PROTEIN</p>
+</div>
+</div>
+<div class="w-10 h-10 bg-surface-container-high border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+</div>
+</header>
+<main class="max-w-2xl md:max-w-6xl mx-auto px-4 mt-6 space-y-6">
+<!-- Live Food Database Search -->
+<section class="bg-surface-container-low border-l-4 border-l-secondary p-4 relative z-40 transition-all focus-within:ring-1 focus-within:ring-secondary/20">
+  <label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3 block">FOOD DATABASE SEARCH</label>
+  <div class="flex items-center bg-background border border-outline-variant/30 px-4 py-3 focus-within:border-secondary transition-colors group">
+    <span class="material-symbols-outlined text-outline mr-3 group-focus-within:text-secondary transition-colors">search</span>
+    <input type="text" id="food-search-input" class="w-full bg-transparent border-none text-on-surface font-body placeholder:text-outline/50 focus:ring-0 outline-none" placeholder="Type a food (e.g., 'Chicken', 'Oats')...">
+  </div>
+  <!-- Injection container for results -->
+  <div id="food-search-results" class="absolute w-full left-0 mt-3 bg-[#131319] border border-outline-variant/30 shadow-[0_20px_50px_rgba(0,0,0,0.9)] max-h-80 overflow-y-auto hidden z-50"></div>
+</section>
+
+<!-- Summary Pill Cards -->
+<section class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container-low p-3 border-l-2 border-error-container flex flex-col items-center justify-center">
+<span id="val-diet-cals" class="font-bebas text-error text-xl leading-none">2,450</span>
+<span class="font-mono-tech text-[9px] text-on-surface-variant">KCAL</span>
+</div>
+<div class="bg-surface-container-low p-3 border-l-2 border-primary-container flex flex-col items-center justify-center">
+<span id="val-diet-protein" class="font-bebas text-primary-fixed text-xl leading-none">185G</span>
+<span class="font-mono-tech text-[9px] text-on-surface-variant">PROTEIN</span>
+</div>
+<div class="bg-surface-container-low p-3 border-l-2 border-secondary flex flex-col items-center justify-center">
+<span class="font-bebas text-secondary text-xl leading-none">6 MEALS</span>
+<span class="font-mono-tech text-[9px] text-on-surface-variant">FREQUENCY</span>
+</div>
+</section>
+<!-- Meal List -->
+<section class="space-y-0.5">
+<!-- Meal 1 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-error flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">07:00 AM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">BREAKFAST</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Oats with Banana &amp; Whey</h3>
+<p class="text-on-surface-variant text-xs mt-1">Steel cut oats, 1 scoop vanilla whey, banana, almond butter</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">520</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">42G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+<!-- Meal 2 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-secondary flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">10:30 AM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">SNACK 01</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Greek Yogurt &amp; Berries</h3>
+<p class="text-on-surface-variant text-xs mt-1">0% Fat Greek yogurt, blueberries, pumpkin seeds</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">280</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">32G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+<!-- Meal 3 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-tertiary flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">01:30 PM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">LUNCH</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Grilled Chicken &amp; Quinoa</h3>
+<p class="text-on-surface-variant text-xs mt-1">Chicken breast, red quinoa, steamed broccoli, olive oil</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">640</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">55G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+<!-- Meal 4 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-primary-fixed flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">04:00 PM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">PRE-WORKOUT</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Rice Cakes &amp; Tuna</h3>
+<p class="text-on-surface-variant text-xs mt-1">3 Brown rice cakes, canned tuna in water, black pepper</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">310</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">28G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+<!-- Meal 5 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-error flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">07:30 PM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">DINNER</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Salmon &amp; Sweet Potato</h3>
+<p class="text-on-surface-variant text-xs mt-1">Wild caught salmon, roasted sweet potato, asparagus</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">580</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">40G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+<!-- Meal 6 -->
+<div class="bg-[#15151F] p-4 border border-outline-variant/20 border-l-4 border-l-secondary flex items-center gap-4 group hover:bg-surface-container-high transition-colors">
+<div class="w-20 shrink-0">
+<div class="font-mono-tech text-secondary text-xs">10:00 PM</div>
+<div class="font-bebas text-on-surface-variant text-sm tracking-wider">SLEEP FEED</div>
+</div>
+<div class="flex-grow">
+<h3 class="font-rajdhani font-semibold text-white text-base leading-tight">Casein Shake</h3>
+<p class="text-on-surface-variant text-xs mt-1">1.5 Scoops Casein, 10g walnuts</p>
+</div>
+<div class="text-right shrink-0 min-w-[70px]">
+<div class="flex flex-col items-end">
+<span class="font-bebas text-error text-xl leading-none">120</span>
+<span class="font-bebas text-on-surface-variant text-[10px] -mt-1">KCAL</span>
+</div>
+<div class="flex flex-col items-end mt-1">
+<span class="font-bebas text-primary-fixed text-sm leading-none">30G</span>
+<span class="font-bebas text-on-surface-variant text-[8px] -mt-1 uppercase">Protein</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Total Summary -->
+<div class="bg-surface-container-lowest p-5 border border-primary-container/20 shadow-[0_0_15px_rgba(225,248,0,0.05)]">
+<div class="flex justify-between items-center">
+<span class="font-mono-tech text-[10px] text-on-surface-variant tracking-[0.2em]">CUMULATIVE TARGET METRICS</span>
+<div class="font-bebas text-primary-fixed text-xl tracking-wider">
+                    TOTAL: <span id="val-diet-total-cals" class="text-error">2,450 KCAL</span> <span class="mx-2 text-outline">·</span> <span id="val-diet-total-protein" class="text-primary-fixed">185G PROTEIN</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full grid grid-cols-4 items-center bg-[#000000] z-50 h-20 shadow-[0_-10px_30px_rgba(0,0,0,0.9)] border-t-0">
+<a class="flex flex-col items-center justify-center text-white/40 h-full hover:text-white transition-all active:bg-[#e1f800]/10" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest font-bold mt-1">DASHBOARD</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 h-full hover:text-white transition-all active:bg-[#e1f800]/10" href="workout.html">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest font-bold mt-1">WORKOUT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e1f800] border-l-4 border-[#e1f800] bg-[#1a1a24] h-full active:bg-[#e1f800]/10" href="diet.html">
+<span class="material-symbols-outlined" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest font-bold mt-1">NUTRITION</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 h-full hover:text-white transition-all active:bg-[#e1f800]/10" href="profile.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest font-bold mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

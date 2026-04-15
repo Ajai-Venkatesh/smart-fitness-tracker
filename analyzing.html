@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="refresh" content="4;url=dashboard.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#f9f5fd",
+              "inverse-primary": "#5b6400",
+              "secondary-fixed-dim": "#00deec",
+              "on-error": "#450900",
+              "inverse-surface": "#fcf8ff",
+              "surface-dim": "#0e0e13",
+              "on-secondary-container": "#e3fdff",
+              "surface-bright": "#2c2b33",
+              "surface-container-low": "#131319",
+              "on-primary-fixed-variant": "#5c6600",
+              "tertiary-dim": "#e4006c",
+              "secondary-dim": "#00deec",
+              "outline": "#76747b",
+              "on-secondary": "#005359",
+              "surface": "#0e0e13",
+              "on-secondary-fixed-variant": "#005e64",
+              "tertiary-fixed-dim": "#ff769e",
+              "surface-container-high": "#1f1f26",
+              "outline-variant": "#48474d",
+              "on-primary-fixed": "#414900",
+              "surface-container-lowest": "#000000",
+              "on-primary-container": "#535c00",
+              "on-surface-variant": "#acaab1",
+              "background": "#0e0e13",
+              "secondary-fixed": "#00eefc",
+              "tertiary": "#ff6b98",
+              "error": "#ff7351",
+              "tertiary-container": "#fc0078",
+              "on-tertiary-container": "#000000",
+              "surface-container-highest": "#25252d",
+              "surface-tint": "#f8ffb8",
+              "on-tertiary": "#47001d",
+              "primary-fixed": "#e1f800",
+              "secondary": "#00eefc",
+              "secondary-container": "#006970",
+              "primary-dim": "#d9ef00",
+              "on-tertiary-fixed": "#380015",
+              "tertiary-fixed": "#ff8eac",
+              "inverse-on-surface": "#55545b",
+              "on-error-container": "#ffd2c8",
+              "on-primary": "#5b6400",
+              "surface-container": "#19191f",
+              "primary-container": "#e1f800",
+              "primary-fixed-dim": "#d4e900",
+              "on-surface": "#f9f5fd",
+              "error-dim": "#d53d18",
+              "surface-variant": "#25252d",
+              "primary": "#f8ffb8",
+              "on-secondary-fixed": "#003f43",
+              "error-container": "#b92902",
+              "on-tertiary-fixed-variant": "#760035"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .grid-overlay {
+            background-image: linear-gradient(to right, rgba(225, 248, 0, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(225, 248, 0, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .scanning-line {
+            height: 2px;
+            background: #00eefc;
+            box-shadow: 0 0 15px #00eefc, 0 0 30px rgba(0, 238, 252, 0.5);
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden min-h-screen relative">
+<!-- Technical Grid Background -->
+<div class="fixed inset-0 grid-overlay pointer-events-none"></div>
+<!-- Top Navigation Anchor (Manual suppressed for focus, but using system logic for shell components) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 border-b border-[#f8ffb8]/10 bg-[#0e0e13]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="sensors">sensors</span>
+<span class="font-headline font-black uppercase tracking-tighter text-primary-fixed">SYSTEM_SCAN</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-[10px] text-on-surface-variant tracking-[0.2em]">NODE_04 // ACTIVE</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-20 flex flex-col items-center justify-center min-h-screen pt-16 pb-20 px-4 max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="w-full text-center mb-12">
+<h1 class="font-headline font-black text-4xl md:text-5xl uppercase tracking-tighter text-on-surface mb-2">
+                ANALYZING YOUR PROFILE
+            </h1>
+<div class="flex items-center justify-center gap-2">
+<div class="h-[2px] w-12 bg-secondary"></div>
+<p class="font-label text-xs tracking-widest text-secondary uppercase">System synchronizing biometric data</p>
+<div class="h-[2px] w-12 bg-secondary"></div>
+</div>
+</div>
+<!-- Processing Stack -->
+<div class="w-full space-y-4 relative">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-outline-variant/30 flex items-stretch h-24 relative overflow-hidden group">
+<div class="w-1 bg-primary-fixed shadow-[0_0_10px_rgba(225,248,0,0.5)]"></div>
+<div class="flex-1 p-5 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Process 01</p>
+<h3 class="font-headline text-lg uppercase leading-none">CALCULATING CALORIE NEEDS</h3>
+</div>
+<div class="flex items-center gap-3">
+<span id="val-analyze-cals" class="font-label text-primary-fixed text-lg font-bold">2,450 kcal</span>
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-container-highest flex">
+<div class="h-full bg-primary-fixed w-full shadow-[0_0_10px_rgba(225,248,0,0.3)]"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant/30 flex items-stretch h-24 relative overflow-hidden">
+<div class="w-1 bg-primary-fixed shadow-[0_0_10px_rgba(225,248,0,0.5)]"></div>
+<div class="flex-1 p-5 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Process 02</p>
+<h3 class="font-headline text-lg uppercase leading-none">COMPUTING MACRO RATIOS</h3>
+</div>
+<div class="flex items-center gap-3">
+<span id="val-analyze-macros" class="font-label text-primary-fixed text-lg font-bold">185g / 290g / 75g</span>
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-container-highest flex">
+<div class="h-full bg-primary-fixed w-full shadow-[0_0_10px_rgba(225,248,0,0.3)]"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant/30 flex items-stretch h-24 relative overflow-hidden">
+<div class="w-1 bg-primary-fixed shadow-[0_0_10px_rgba(225,248,0,0.5)]"></div>
+<div class="flex-1 p-5 flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Process 03</p>
+<h3 class="font-headline text-lg uppercase leading-none">BUILDING WORKOUT PLAN</h3>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label text-primary-fixed text-lg font-bold uppercase tracking-widest">5-DAY PROGRAM</span>
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-primary-fixed w-3/4 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low border border-outline-variant/30 flex items-stretch h-24 relative overflow-hidden">
+<div class="w-1 bg-primary-fixed shadow-[0_0_10px_rgba(225,248,0,0.5)]"></div>
+<div class="flex-1 p-5 flex flex-col justify-between">
+<div class="flex justify-between items-center">
+<div class="space-y-1">
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Process 04</p>
+<h3 class="font-headline text-lg uppercase leading-none">GENERATING DIET PLAN</h3>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label text-primary-fixed text-lg font-bold uppercase tracking-widest">6 MEALS / DAY</span>
+<span class="material-symbols-outlined text-primary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="w-full h-1 bg-surface-container-highest">
+<div class="h-full bg-primary-fixed w-1/2"></div>
+</div>
+</div>
+</div>
+<!-- Kinetic Radar Element -->
+<div class="absolute -inset-x-8 top-1/2 scanning-line opacity-50 blur-[2px]"></div>
+</div>
+<!-- Peripheral Data Displays -->
+<div class="mt-12 w-full grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest border border-outline-variant/10">
+<p class="font-label text-[9px] text-on-surface-variant uppercase tracking-[0.3em] mb-2">NEURAL_NET_STATUS</p>
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 bg-secondary animate-pulse"></div>
+<div class="w-2 h-2 bg-secondary animate-pulse" style="animation-delay: 0.1s"></div>
+<div class="w-2 h-2 bg-secondary animate-pulse" style="animation-delay: 0.2s"></div>
+<div class="w-2 h-2 bg-surface-container-highest"></div>
+<div class="w-2 h-2 bg-surface-container-highest"></div>
+<span class="font-label text-[10px] ml-2 text-secondary">OPTIMIZED</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-lowest border border-outline-variant/10">
+<p class="font-label text-[9px] text-on-surface-variant uppercase tracking-[0.3em] mb-2">UPTIME</p>
+<span class="font-label text-[10px] text-on-surface">SESSION_00:04:12:88</span>
+</div>
+</div>
+</main>
+<!-- Footer Identity -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-center items-center h-20 px-4 bg-[#000000] border-t border-[#f8ffb8]/5">
+<div class="text-center">
+<p class="font-label text-[11px] uppercase tracking-[0.4em] text-on-surface-variant">
+                POWERED BY <span class="text-primary-fixed font-bold">NUTRIMUSCLES AI</span>
+</p>
+<div class="flex justify-center gap-1 mt-2">
+<div class="w-4 h-[1px] bg-outline-variant"></div>
+<div class="w-1 h-[1px] bg-primary-fixed"></div>
+<div class="w-4 h-[1px] bg-outline-variant"></div>
+</div>
+</div>
+</footer>
+<!-- Image for decorative reference (hidden) -->
+<img alt="Technological background" class="hidden" data-alt="Close-up of a high-tech computer server rack with glowing blue and yellow LED indicators and complex cable management in a dark data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0xfV_Li0Q9pWNX0uwFTqduzdmPnBD0lfhRjNhKW8ChnfGXuxOnCtiTIMi7GYRLotN8MXxm1Oxznmwje_5b375zf349B1u0bTOLp2OwzUs6h-PhIpeZn1ecmGqlBJrzdWya1Jiq3rk0WXtD2nE0PrEhGF1DA0MFCxJEooZ2frGgZU6gXE-91-DdqGqtUkuiw0RRU6FuifPZZ4-hbhklrE7ko4_azJSqbueeVgQmbjriYRhF4tjChFacBjVhsJ2sT6J4EV4Wy2cKKM"/>
+</body></html>

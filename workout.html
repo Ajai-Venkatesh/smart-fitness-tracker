@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@400;700&amp;family=Bebas+Neue&amp;family=Space+Mono&amp;family=Rajdhani:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#380015",
+              "primary-container": "#e1f800",
+              "inverse-on-surface": "#55545b",
+              "surface-container": "#19191f",
+              "on-secondary-container": "#e3fdff",
+              "on-primary-fixed-variant": "#5c6600",
+              "background": "#0e0e13",
+              "secondary-fixed": "#00eefc",
+              "on-primary-fixed": "#414900",
+              "tertiary-dim": "#e4006c",
+              "secondary": "#00eefc",
+              "on-error-container": "#ffd2c8",
+              "outline-variant": "#48474d",
+              "tertiary-container": "#fc0078",
+              "surface-tint": "#f8ffb8",
+              "primary-fixed": "#e1f800",
+              "on-tertiary-container": "#000000",
+              "on-primary": "#5b6400",
+              "surface-container-high": "#1f1f26",
+              "surface-bright": "#2c2b33",
+              "error-container": "#b92902",
+              "surface-container-lowest": "#000000",
+              "surface": "#0e0e13",
+              "surface-dim": "#0e0e13",
+              "secondary-dim": "#00deec",
+              "tertiary-fixed-dim": "#ff769e",
+              "on-secondary-fixed": "#003f43",
+              "secondary-fixed-dim": "#00deec",
+              "surface-container-low": "#131319",
+              "error": "#ff7351",
+              "surface-variant": "#25252d",
+              "error-dim": "#d53d18",
+              "primary-dim": "#d9ef00",
+              "outline": "#76747b",
+              "on-secondary": "#005359",
+              "on-tertiary": "#47001d",
+              "tertiary": "#ff6b98",
+              "on-error": "#450900",
+              "on-secondary-fixed-variant": "#005e64",
+              "inverse-primary": "#5b6400",
+              "on-background": "#f9f5fd",
+              "inverse-surface": "#fcf8ff",
+              "primary-fixed-dim": "#d4e900",
+              "surface-container-highest": "#25252d",
+              "primary": "#f8ffb8",
+              "on-surface": "#f9f5fd",
+              "tertiary-fixed": "#ff8eac",
+              "secondary-container": "#006970",
+              "on-tertiary-fixed-variant": "#760035",
+              "on-surface-variant": "#acaab1",
+              "on-primary-container": "#535c00"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"],
+              "bebas": ["Bebas Neue"],
+              "mono-space": ["Space Mono"],
+              "rajdhani": ["Rajdhani"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(225, 248, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(225, 248, 0, 0.03) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glow-card {
+            box-shadow: 0 0 15px rgba(225, 248, 0, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen pb-24 grid-bg">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 rounded-none border-none bg-gradient-to-b from-[#0e0e13] to-transparent shadow-[0_0_20px_rgba(225,248,0,0.1)]">
+<div class="flex items-center px-6 py-8 w-full max-w-none">
+<span class="material-symbols-outlined text-[#e1f800] mr-4 text-3xl" data-icon="fitness_center">fitness_center</span>
+<div>
+<h1 class="font-['Epilogue'] font-black uppercase tracking-tighter text-4xl text-[#e1f800]">WORKOUT PLAN</h1>
+<p class="font-mono-space text-on-surface-variant text-xs tracking-widest uppercase">5-DAY PROGRAM</p>
+</div>
+</div>
+</header>
+<main class="pt-32 px-4 space-y-8 max-w-3xl mx-auto">
+<!-- Weekly Strip -->
+<section class="flex justify-between items-center gap-2 overflow-x-auto pb-2">
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-primary-container text-on-primary-container">
+<span class="font-mono-space text-[10px] font-bold">MON</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-primary-container text-on-primary-container">
+<span class="font-mono-space text-[10px] font-bold">TUE</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-primary-container text-on-primary-container">
+<span class="font-mono-space text-[10px] font-bold">WED</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-surface-container border border-outline-variant text-on-surface-variant opacity-50">
+<span class="font-mono-space text-[10px] font-bold">THU</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-primary-container text-on-primary-container">
+<span class="font-mono-space text-[10px] font-bold">FRI</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-primary-container text-on-primary-container">
+<span class="font-mono-space text-[10px] font-bold">SAT</span>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[48px] h-16 bg-surface-container border border-outline-variant text-on-surface-variant opacity-50">
+<span class="font-mono-space text-[10px] font-bold">SUN</span>
+</div>
+</section>
+<!-- Workout List -->
+<div class="space-y-6">
+<!-- MON Card -->
+<div class="relative group bg-surface-container-low border-l-4 border-primary-container p-6 glow-card transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-baseline">
+<span class="font-bebas text-5xl text-primary-container tracking-tighter">MON</span>
+<span class="font-mono-space text-on-surface-variant text-sm tracking-widest uppercase">DAY 1</span>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-primary-container">PUSH</span>
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-primary-container">4×8-12</span>
+</div>
+</div>
+<h3 class="font-bebas text-2xl text-on-surface mb-2 tracking-wide uppercase italic">PUSH DAY — CHEST &amp; SHOULDERS</h3>
+<p class="font-rajdhani text-on-surface-variant text-lg leading-tight mb-6 max-w-md">Focus on heavy compound movements for chest and lateral deltoids.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="schedule">schedule</span>
+<span class="font-mono-space text-xs text-primary-container">60 MIN</span>
+</div>
+<div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="fitness_center">fitness_center</span>
+</div>
+</div>
+<!-- TUE Card -->
+<div class="relative group bg-surface-container-low p-6 border border-outline-variant hover:border-primary-container/50 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-baseline">
+<span class="font-bebas text-5xl text-primary-container tracking-tighter">TUE</span>
+<span class="font-mono-space text-on-surface-variant text-sm tracking-widest uppercase">DAY 2</span>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-secondary">PULL</span>
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-secondary">4×10-15</span>
+</div>
+</div>
+<h3 class="font-bebas text-2xl text-on-surface mb-2 tracking-wide uppercase italic">PULL DAY — BACK &amp; BICEPS</h3>
+<p class="font-rajdhani text-on-surface-variant text-lg leading-tight mb-6 max-w-md">Explosive pull movements and high-volume bicep isolation.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="timer">timer</span>
+<span class="font-mono-space text-xs text-secondary">55 MIN</span>
+</div>
+</div>
+<!-- WED Card -->
+<div class="relative group bg-surface-container-low p-6 border border-outline-variant hover:border-primary-container/50 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-baseline">
+<span class="font-bebas text-5xl text-primary-container tracking-tighter">WED</span>
+<span class="font-mono-space text-on-surface-variant text-sm tracking-widest uppercase">DAY 3</span>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-primary-container">LEGS</span>
+<span class="bg-surface-variant px-3 py-1 font-mono-space text-[10px] text-primary-container">5×5</span>
+</div>
+</div>
+<h3 class="font-bebas text-2xl text-on-surface mb-2 tracking-wide uppercase italic">LEG DAY — QUADS &amp; CALVES</h3>
+<p class="font-rajdhani text-on-surface-variant text-lg leading-tight mb-6 max-w-md">High intensity squats and leg press to maximize hypertrophy.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="av_timer">av_timer</span>
+<span class="font-mono-space text-xs text-primary-container">70 MIN</span>
+</div>
+</div>
+<!-- THU Card (Rest) -->
+<div class="relative group bg-surface-container-lowest p-6 border border-dashed border-outline-variant opacity-60">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4 items-baseline">
+<span class="font-bebas text-5xl text-outline tracking-tighter">THU</span>
+<span class="font-mono-space text-on-surface-variant text-sm tracking-widest uppercase">DAY 4</span>
+</div>
+</div>
+<h3 class="font-bebas text-2xl text-outline mb-2 tracking-wide uppercase italic">REST / RECOVERY</h3>
+<p class="font-rajdhani text-on-surface-variant text-lg leading-tight mb-6 max-w-md">Active stretching and mobility recommended for recovery.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="self_improvement">self_improvement</span>
+<span class="font-mono-space text-xs text-outline italic">ACTIVE RECOVERY</span>
+</div>
+</div>
+<!-- BENTO STYLE STATS -->
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="bg-surface-container-high p-4 border border-outline-variant">
+<p class="font-mono-space text-[10px] text-on-surface-variant uppercase mb-2">Total Volume Est.</p>
+<p class="font-bebas text-4xl text-primary-container">42,500 <span class="text-xs font-mono-space text-on-surface-variant">KG</span></p>
+</div>
+<div class="bg-surface-container-high p-4 border border-outline-variant">
+<p class="font-mono-space text-[10px] text-on-surface-variant uppercase mb-2">Completion Rate</p>
+<div class="flex items-end gap-2">
+<p class="font-bebas text-4xl text-secondary">88<span class="text-xs font-mono-space text-on-surface-variant">%</span></p>
+<div class="flex gap-1 pb-2">
+<div class="w-1 h-4 bg-secondary"></div>
+<div class="w-1 h-4 bg-secondary"></div>
+<div class="w-1 h-4 bg-secondary"></div>
+<div class="w-1 h-4 bg-secondary"></div>
+<div class="w-1 h-4 bg-secondary/20"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 bg-[#000000] z-50 rounded-none h-20 border-t-2 border-[#1a1a24] shadow-[0_-4px_24px_rgba(0,0,0,0.8)]">
+<a class="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/20" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e1f800] border-l-4 border-[#e1f800] bg-[#e1f800]/5 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/20" href="workout.html">
+<span class="material-symbols-outlined" data-icon="exercise">exercise</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Workout</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/20" href="diet.html">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Diet</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 py-2 hover:text-[#e1f800] transition-all active:bg-[#e1f800]/20" href="profile.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Start Workout -->
+<a href="push-day.html" class="fixed right-6 bottom-24 bg-primary-container text-on-primary-container w-16 h-16 flex items-center justify-center shadow-[0_0_20px_rgba(225,248,0,0.4)] active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="play_arrow">play_arrow</span>
+</a>
+</body></html>
