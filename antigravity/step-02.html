@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriMuscles - Step 02</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#e3fdff",
+              "on-tertiary": "#47001d",
+              "error-container": "#b92902",
+              "tertiary-fixed-dim": "#ff769e",
+              "surface-container": "#19191f",
+              "on-tertiary-container": "#000000",
+              "on-surface-variant": "#acaab1",
+              "on-secondary-fixed-variant": "#005e64",
+              "primary": "#f8ffb8",
+              "tertiary": "#ff6b98",
+              "surface-variant": "#25252d",
+              "secondary-fixed-dim": "#00deec",
+              "on-error": "#450900",
+              "secondary-fixed": "#00eefc",
+              "on-primary-fixed-variant": "#5c6600",
+              "secondary-dim": "#00deec",
+              "background": "#0e0e13",
+              "on-primary-container": "#535c00",
+              "surface-bright": "#2c2b33",
+              "primary-container": "#e1f800",
+              "primary-dim": "#d9ef00",
+              "surface-container-high": "#1f1f26",
+              "outline-variant": "#48474d",
+              "on-primary-fixed": "#414900",
+              "tertiary-dim": "#e4006c",
+              "primary-fixed-dim": "#d4e900",
+              "inverse-primary": "#5b6400",
+              "secondary-container": "#006970",
+              "error": "#ff7351",
+              "surface-dim": "#0e0e13",
+              "outline": "#76747b",
+              "on-error-container": "#ffd2c8",
+              "on-primary": "#5b6400",
+              "error-dim": "#d53d18",
+              "primary-fixed": "#e1f800",
+              "inverse-surface": "#fcf8ff",
+              "tertiary-fixed": "#ff8eac",
+              "on-tertiary-fixed-variant": "#760035",
+              "surface-container-low": "#131319",
+              "on-tertiary-fixed": "#380015",
+              "surface": "#0e0e13",
+              "surface-container-lowest": "#000000",
+              "surface-tint": "#f8ffb8",
+              "secondary": "#00eefc",
+              "on-secondary": "#005359",
+              "inverse-on-surface": "#55545b",
+              "tertiary-container": "#fc0078",
+              "on-surface": "#f9f5fd",
+              "on-secondary-fixed": "#003f43",
+              "on-background": "#f9f5fd",
+              "surface-container-highest": "#25252d"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tech-grid {
+            background-image: linear-gradient(to right, rgba(172, 170, 177, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(172, 170, 177, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .kinetic-scroll::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body tech-grid min-h-screen flex flex-col">
+<!-- TopAppBar from Shared Components -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-gradient-to-b from-[#1a1a24] to-[#0e0e13] shadow-[0_0_20px_rgba(225,248,0,0.05)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e1f800]">menu</span>
+<h1 class="font-headline font-black tracking-widest italic text-xl text-[#e1f800] uppercase">NutriMuscles</h1>
+</div>
+<div class="font-headline font-black tracking-tighter uppercase text-[#e1f800] drop-shadow-[0_0_8px_rgba(225,248,0,0.6)]">
+            02 / 02
+        </div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full">
+<!-- Section Header -->
+<section class="mb-10">
+<h2 class="font-headline font-black text-4xl italic tracking-tighter text-primary-fixed mb-2">YOUR FITNESS GOALS</h2>
+<div class="h-1 w-16 bg-primary-fixed"></div>
+</section>
+<!-- 1. ACTIVITY LEVEL -->
+<section class="mb-10">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">01 // ACTIVITY LEVEL</label>
+<div id="activity-group" class="flex overflow-x-auto gap-3 md:gap-6 kinetic-scroll pb-2">
+<!-- Sedentary -->
+<div class="min-w-[100px] flex-shrink-0 bg-surface-container-high p-4 border border-transparent flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-outline">chair</span>
+<span class="font-label text-[10px] uppercase">Sedentary</span>
+</div>
+<!-- Light -->
+<div class="min-w-[100px] flex-shrink-0 bg-surface-container-high p-4 border border-transparent flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-outline">directions_walk</span>
+<span class="font-label text-[10px] uppercase">Light</span>
+</div>
+<!-- Moderate (Active default) -->
+<div class="min-w-[100px] flex-shrink-0 bg-surface-container-high p-4 border border-transparent flex flex-col items-center gap-2 active">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-label text-[10px] uppercase text-outline">Moderate</span>
+</div>
+<!-- Very Active -->
+<div class="min-w-[100px] flex-shrink-0 bg-surface-container-high p-4 border border-transparent flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-outline">bolt</span>
+<span class="font-label text-[10px] uppercase whitespace-nowrap">Very Active</span>
+</div>
+<!-- Extreme -->
+<div class="min-w-[100px] flex-shrink-0 bg-surface-container-high p-4 border border-transparent flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-outline">speed</span>
+<span class="font-label text-[10px] uppercase">Extreme</span>
+</div>
+</div>
+</section>
+<!-- 2. PRIMARY GOAL -->
+<section class="mb-10">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">02 // PRIMARY GOAL</label>
+<div id="goal-group" class="space-y-3">
+<!-- Muscle Gain -->
+<div class="bg-surface-container p-4 border-l-4 border-error flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<h4 class="font-headline font-bold text-lg text-error">MUSCLE GAIN</h4>
+<p class="text-xs text-outline">Hypertrophy focus &amp; caloric surplus</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-error transition-colors">chevron_right</span>
+</div>
+<!-- Fat Loss -->
+<div class="bg-surface-container p-4 border-l-4 border-secondary flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<h4 class="font-headline font-bold text-lg text-secondary">FAT LOSS</h4>
+<p class="text-xs text-outline">Metabolic conditioning &amp; deficit</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">chevron_right</span>
+</div>
+<!-- Body Recomposition -->
+<div class="bg-surface-container p-4 border-l-4 border-tertiary flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<h4 class="font-headline font-bold text-lg text-tertiary">BODY RECOMPOSITION</h4>
+<p class="text-xs text-outline">Simultaneous muscle gain &amp; fat loss</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">chevron_right</span>
+</div>
+<!-- Strength -->
+<div class="bg-surface-container p-4 border-l-4 border-error-container flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<h4 class="font-headline font-bold text-lg text-error-container">STRENGTH</h4>
+<p class="text-xs text-outline">Maximum force production focus</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-error-container transition-colors">chevron_right</span>
+</div>
+<!-- Maintenance -->
+<div class="bg-surface-container p-4 border-l-4 border-outline flex items-center justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<h4 class="font-headline font-bold text-lg text-outline">MAINTENANCE</h4>
+<p class="text-xs text-outline">Steady state metabolic balance</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- 3. FITNESS LEVEL -->
+<section class="mb-10">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">03 // FITNESS LEVEL</label>
+<div id="level-group" class="grid grid-cols-3 gap-1 bg-surface-container-low p-1">
+<button class="text-outline py-3 font-label text-xs tracking-widest uppercase hover:bg-surface-container-high active">BEGINNER</button>
+<button class="text-outline py-3 font-label text-xs tracking-widest uppercase hover:bg-surface-container-high">INTERMEDIATE</button>
+<button class="text-outline py-3 font-label text-xs tracking-widest uppercase hover:bg-surface-container-high">ADVANCED</button>
+</div>
+</section>
+<!-- 4. DIET PREFERENCE & 5. TRAINING DAYS -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<section>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">04 // DIET PREFERENCE</label>
+<div class="relative">
+<button id="diet-pref-btn" class="w-full bg-surface-container p-4 flex justify-between items-center border-b-2 border-outline-variant focus:border-primary-fixed transition-all">
+<span id="diet-pref-text" class="font-body text-on-surface">Standard</span>
+<span class="material-symbols-outlined text-primary-fixed">expand_more</span>
+</button>
+</div>
+</section>
+<section>
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">05 // TRAINING DAYS</label>
+<div class="flex items-center justify-between bg-surface-container p-1 border border-outline-variant/30">
+<button id="btn-days-minus" class="p-3 text-primary-fixed hover:bg-surface-container-high active:scale-90 transition-all">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span id="text-days-count" class="font-headline font-black text-2xl">5</span>
+<button id="btn-days-plus" class="p-3 text-primary-fixed hover:bg-surface-container-high active:scale-90 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center bg-[#000000] border-t border-[#ffffff]/10 h-20">
+<a href="profile-setup.html" class="flex flex-col items-center justify-center text-gray-400 px-8 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest transition-all active:translate-y-1 hover:text-white">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back">arrow_back</span>
+            BACK
+        </a>
+<!-- Progress Bar (100%) -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-surface-container-highest">
+<div class="w-full h-full bg-primary-fixed shadow-[0_0_10px_#e1f800]"></div>
+</div>
+<a href="analyzing.html" class="flex flex-col items-center justify-center bg-[#e1f800] text-[#0e0e13] rounded-none px-8 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold transition-all active:translate-y-1 hover:bg-[#f8ffb8] h-full" style="height: 100%;">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined mb-1" data-icon="bolt">bolt</span>
+            GENERATE PLAN
+</div>
+        </a>
+</nav>
+</body></html>

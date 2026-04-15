@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriMuscles - Profile Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#000000",
+              "secondary-container": "#006970",
+              "outline": "#76747b",
+              "on-primary": "#5b6400",
+              "primary": "#f8ffb8",
+              "inverse-on-surface": "#55545b",
+              "outline-variant": "#48474d",
+              "on-secondary-fixed": "#003f43",
+              "surface-container-lowest": "#000000",
+              "surface": "#0e0e13",
+              "surface-variant": "#25252d",
+              "error-container": "#b92902",
+              "error": "#ff7351",
+              "on-secondary-container": "#e3fdff",
+              "tertiary-fixed": "#ff8eac",
+              "surface-tint": "#f8ffb8",
+              "surface-container-high": "#1f1f26",
+              "inverse-primary": "#5b6400",
+              "secondary-fixed": "#00eefc",
+              "primary-container": "#e1f800",
+              "tertiary": "#ff6b98",
+              "on-error-container": "#ffd2c8",
+              "secondary-dim": "#00deec",
+              "on-surface": "#f9f5fd",
+              "secondary": "#00eefc",
+              "background": "#0e0e13",
+              "surface-container": "#19191f",
+              "tertiary-fixed-dim": "#ff769e",
+              "on-primary-fixed": "#414900",
+              "surface-dim": "#0e0e13",
+              "tertiary-dim": "#e4006c",
+              "primary-fixed-dim": "#d4e900",
+              "on-secondary": "#005359",
+              "primary-dim": "#d9ef00",
+              "tertiary-container": "#fc0078",
+              "on-surface-variant": "#acaab1",
+              "on-secondary-fixed-variant": "#005e64",
+              "on-tertiary-fixed": "#380015",
+              "secondary-fixed-dim": "#00deec",
+              "on-primary-container": "#535c00",
+              "on-error": "#450900",
+              "primary-fixed": "#e1f800",
+              "on-tertiary-fixed-variant": "#760035",
+              "on-primary-fixed-variant": "#5c6600",
+              "on-background": "#f9f5fd",
+              "error-dim": "#d53d18",
+              "on-tertiary": "#47001d",
+              "surface-container-low": "#131319",
+              "surface-bright": "#2c2b33",
+              "inverse-surface": "#fcf8ff",
+              "surface-container-highest": "#25252d"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-grid {
+            background-image: linear-gradient(to right, rgba(172, 170, 177, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(172, 170, 177, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed kinetic-grid min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 h-16 fixed top-0 z-50 bg-[#000000] shadow-[0_0_20px_rgba(225,248,0,0.1)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#e1f800]" data-icon="api">api</span>
+<h1 class="text-xl font-black text-[#e1f800] tracking-widest font-['Epilogue'] uppercase">NUTRIMUSCLES</h1>
+</div>
+<div class="font-label text-xs tracking-[0.2em] text-on-surface-variant">
+<span class="text-primary-fixed">01</span> / 02
+        </div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-xl mx-auto">
+<!-- Section Header -->
+<div class="mb-10">
+<div class="flex items-center gap-4">
+<h2 class="font-headline text-4xl font-extrabold tracking-tighter text-primary-fixed uppercase whitespace-nowrap">YOUR BODY STATS</h2>
+<div class="h-[1px] w-full bg-outline-variant/30"></div>
+</div>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mt-2">TECHNICAL CALIBRATION REQUIRED</p>
+</div>
+<!-- Form Fields -->
+<div class="space-y-4">
+<!-- AGE -->
+<div class="bg-surface-container-low p-5 border-l-4 border-transparent focus-within:border-primary-fixed transition-all">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">AGE</label>
+<input id="val-age" class="w-full bg-transparent border-none p-0 font-body text-2xl font-semibold text-on-surface focus:ring-0 placeholder:text-surface-variant" placeholder="25" type="number" min="15" max="100"/>
+</div>
+<!-- GENDER -->
+<div class="bg-surface-container-low p-5 border-l-4 border-transparent">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-4">GENDER</label>
+<div id="gender-group" class="flex gap-2">
+<button class="flex-1 py-3 font-label text-xs font-bold tracking-widest bg-transparent text-on-surface-variant border border-outline-variant transition-all active active:scale-95">MALE</button>
+<button class="flex-1 py-3 font-label text-xs font-bold tracking-widest bg-transparent text-on-surface-variant border border-outline-variant hover:border-primary-fixed/50 transition-all active:scale-95">FEMALE</button>
+</div>
+</div>
+<!-- WEIGHT -->
+<div class="bg-surface-container-low p-5 border-l-4 border-transparent focus-within:border-primary-fixed transition-all">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">WEIGHT</label>
+<div class="flex items-baseline justify-between">
+<input id="val-weight" class="w-full bg-transparent border-none p-0 font-body text-2xl font-semibold text-on-surface focus:ring-0 placeholder:text-surface-variant" placeholder="75" type="number" min="30" max="250"/>
+<span class="font-label text-sm text-on-surface-variant font-bold">KG</span>
+</div>
+</div>
+<!-- HEIGHT -->
+<div class="bg-surface-container-low p-5 border-l-4 border-transparent focus-within:border-primary-fixed transition-all">
+<label class="block font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">HEIGHT</label>
+<div class="flex items-baseline justify-between">
+<input id="val-height" class="w-full bg-transparent border-none p-0 font-body text-2xl font-semibold text-on-surface focus:ring-0 placeholder:text-surface-variant" placeholder="175" type="number" min="100" max="250"/>
+<span class="font-label text-sm text-on-surface-variant font-bold">CM</span>
+</div>
+</div>
+<!-- BODY FAT -->
+<div class="bg-surface-container-low p-5 border-l-4 border-transparent">
+<div class="flex justify-between items-center mb-6">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">BODY FAT % <span class="opacity-40 italic">(OPTIONAL)</span></label>
+<span id="bf-text" class="font-label text-lg font-bold text-primary-fixed">15%</span>
+</div>
+<input id="bf-slider" class="w-full h-1 bg-surface-variant appearance-none cursor-pointer accent-primary-fixed" max="40" min="5" type="range" value="15"/>
+<div class="flex justify-between mt-2 font-label text-[8px] text-on-surface-variant opacity-50 uppercase tracking-tighter">
+<span>MIN 05%</span>
+<span>MAX 40%</span>
+</div>
+</div>
+</div>
+<!-- Decorative UI Element -->
+<div class="mt-12 flex gap-1 h-8 opacity-20">
+<div class="w-1 bg-primary-fixed h-full"></div>
+<div class="w-1 bg-primary-fixed h-2/3"></div>
+<div class="w-1 bg-primary-fixed h-1/2"></div>
+<div class="w-1 bg-primary-fixed h-1/4"></div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center bg-[#000000] border-t border-[#ffffff]/10 h-20">
+<a href="index.html" class="flex flex-col items-center justify-center text-gray-400 px-8 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest transition-all active:translate-y-1 hover:text-white">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back">arrow_back</span>
+            BACK
+        </a>
+<!-- Progress Bar (Internal to Nav Logic) -->
+<div class="absolute top-0 left-0 w-full h-[2px] bg-surface-container-highest">
+<div class="w-1/2 h-full bg-primary-fixed shadow-[0_0_10px_#e1f800]"></div>
+</div>
+<a href="step-02.html" id="btn-profile-next" class="flex flex-col items-center justify-center bg-[#e1f800] text-[#0e0e13] rounded-none px-8 py-2 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold transition-all active:translate-y-1 hover:bg-[#f8ffb8] h-full" style="height: 100%;">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined mb-1" data-icon="chevron_right">chevron_right</span>
+            NEXT STEP
+</div>
+        </a>
+</nav>
+</body></html>
